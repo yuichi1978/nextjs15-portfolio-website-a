@@ -5,7 +5,7 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <footer className="relative py-8 max-w-[1200px] mx-auto px-4">
       <div className="md:hidden absolute inset-0 overflow-hidden">
@@ -107,4 +107,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+}
