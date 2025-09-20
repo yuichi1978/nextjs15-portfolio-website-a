@@ -4,37 +4,8 @@ import {
   AiFillFacebook,
   AiFillInstagram,
 } from "react-icons/ai";
-import { FaTelegramPlane } from "react-icons/fa";
 
-const socilaLinks = [
-  {
-    href: "https://github.com",
-    Icon: AiFillGithub,
-    label: "GitHub",
-  },
-  {
-    href: "https://x.com",
-    Icon: AiOutlineX,
-    label: "X (Twitter)",
-  },
-  {
-    href: "https://facebook.com",
-    Icon: AiFillFacebook,
-    label: "Facebook",
-  },
-  {
-    href: "https://instagram.com",
-    Icon: AiFillInstagram,
-    label: "Instagram",
-  },
-  {
-    href: "https://telegram.com",
-    Icon: FaTelegramPlane,
-    label: "Telegram",
-  },
-];
-
-export default function Footer() {
+export const Footer = () => {
   return (
     <footer className="relative py-8 max-w-[1200px] mx-auto px-4">
       <div className="md:hidden absolute inset-0 overflow-hidden">
@@ -58,22 +29,82 @@ export default function Footer() {
         </h1>
       </div>
 
-      <div className="mt-12 flex sm:justify-between justify-center items-center gap-10 max-sm:flex-col">
-        <p className="text-gray-200">© 2024. All rights reserved.</p>
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-8 text-gray-200">
+        <div className="space-y-2">
+          <h3 className="font-bold">Contact Me</h3>
+          <p>+89898998</p>
+          <p>john@doe.com</p>
+        </div>
 
-        <ul className="flex flex-wrap gap-5">
-          {socilaLinks.map(({ href, Icon, label }) => (
-            <a
-              key={label}
-              href={href}
-              aria-label={label}
-              className="text-gray-200 flex items-center justify-center w-10 h-10 rounded-full hover:text-gray-400 transition-colors"
-            >
-              <Icon size={30} />
+        <div className="space-y-2">
+          <h3 className="font-bold">Useful links</h3>
+          <ul>
+            <li>
+              <a href="#" className="hover:underline">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                404 Page
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                Licensing
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div className="space-y-2">
+          <h3 className="font-bold">Social</h3>
+          <ul>
+            <li>
+              <a href="#" className="hover:underline">
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                X
+              </a>
+            </li>
+            <li>
+              <a href="#" className="hover:underline">
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="text-gray-400 mt-12 container flex sm:justify-between justify-center items-center gap-10">
+        <p>© 2024. All rights reserved.</p>
+
+        <ul className="flex flex-row gap-6">
+          <li>
+            <a href="#">
+              <AiFillGithub size={30} />
             </a>
-          ))}
+          </li>
+          <li>
+            <a href="#">
+              <AiOutlineX size={30} />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <AiFillFacebook size={30} />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <AiFillInstagram size={30} />
+            </a>
+          </li>
         </ul>
       </div>
     </footer>
   );
-}
+};
