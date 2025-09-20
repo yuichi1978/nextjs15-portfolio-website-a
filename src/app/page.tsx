@@ -1,17 +1,17 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
-import LogoAnimation from "@/components/LogoAnimation";
-import Portfolio from "@/components/Portfolio";
-import Stack from "@/components/Stack";
-import KeyMetrics from "@/components/KeyMetrics";
-import Servers from "@/components/Servers";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
+import LogoAnimation from "@/app/components/LogoAnimation";
+import Portfolio from "@/app/components/Portfolio";
+import Stack from "@/app/components/Stack";
+import KeyMetrics from "@/app/components/KeyMetrics";
+import Servers from "@/app/components/Servers";
+import Contact from "@/app/components/Contact";
+import Footer from "@/app/components/Footer";
+import Navbar from "@/app/components/Navbar";
 
 export default function HomePage() {
   return (
-    <>
+    <div className="w-full overflow-x-hidden">
       <Navbar />
       <Hero />
       <LogoAnimation />
@@ -22,6 +22,6 @@ export default function HomePage() {
       <Servers />
       <Contact />
       <Footer />
-    </>
+    </div>
   );
 }

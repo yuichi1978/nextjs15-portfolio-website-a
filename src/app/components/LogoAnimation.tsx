@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import udemy from "../../public/assets/udemy.png";
-import fiverr from "../../public/assets/fiverr.png";
-import elementor from "../../public/assets/elementor.png";
-import logitech from "../../public/assets/logitech.png";
-import oracle from "../../public/assets/oracle.png";
+import udemy from "../../../public/assets/udemy.png";
+import fiverr from "../../../public/assets/fiverr.png";
+import elementor from "../../../public/assets/elementor.png";
+import logitech from "../../../public/assets/logitech.png";
+import oracle from "../../../public/assets/oracle.png";
 
 const images = [
   { src: udemy, alt: "figma" },
